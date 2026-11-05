@@ -1,131 +1,88 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Jose Navarro. Proyectos sobre gestión pública, políticas públicas y economía en el Perú.">
-<title>Jose Navarro | Proyectos</title>
-<style>
-:root{--ink:#1d1735;--violet:#49349b;--line:#d8d0ec;--surface:#fff;--canvas:#f1eef9;--yellow:#f6e28e}
-*{box-sizing:border-box}
-body{margin:0;background:var(--canvas);color:var(--ink);font:1rem/1.55 Arial,Helvetica,sans-serif}
-a{color:#3e2b86;text-underline-offset:.2em}
-:focus-visible{outline:3px solid #7547c4;outline-offset:4px}
-.skip{position:absolute;top:.5rem;left:.5rem;z-index:2;background:#fff;padding:.6rem;transform:translateY(-150%)}
-.skip:focus{transform:none}
-.shell{max-width:82rem;margin:auto;padding:1.15rem clamp(.85rem,4vw,3rem) 2rem}
-header{display:flex;justify-content:space-between;align-items:center;gap:.6rem 1rem;flex-wrap:wrap;padding-bottom:1rem;border-bottom:1px solid var(--line)}
-.brand{display:flex;align-items:center;gap:.7rem;font-weight:800;text-decoration:none;color:var(--ink)}
-.monogram{display:grid;place-items:center;width:2.5rem;height:2.5rem;background:var(--yellow);border:1px solid var(--ink);border-radius:.65rem;font-size:.85rem}
-nav,.actions{display:flex;gap:.35rem .9rem;align-items:center;flex-wrap:wrap}
-nav a,.actions a{display:inline-flex;align-items:center;min-height:44px;font-weight:700}
-.workspace{display:grid;grid-template-columns:minmax(0,16rem) minmax(0,1fr);gap:clamp(1rem,3vw,2.5rem);align-items:start;margin-top:1.5rem}
-.profile{display:grid;align-content:start;gap:.9rem;background:var(--surface);border:1px solid var(--line);border-radius:1rem;padding:1rem}
-.profile img{display:block;width:5rem;height:5rem;border-radius:.8rem}
-h1,h2,h3,p,figure{margin:0}
-h1,h2,h3{line-height:1.12}
-h1{font-size:1.7rem;letter-spacing:-.035em}
-.profile p{color:#514663}
-.profile .actions{border-top:1px solid var(--line);padding-top:.4rem}
-.feature{display:grid;gap:1.15rem;background:var(--surface);border:1px solid var(--line);border-radius:1rem;overflow:hidden}
-.feature-head{padding:clamp(1.15rem,5vw,3.2rem);background:var(--violet);color:#fff;display:grid;gap:1rem}
-.kicker{font:bold .75rem/1.4 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
-.feature-head .kicker{color:var(--yellow)}
-h2{font-size:clamp(2.1rem,5.5vw,4.4rem);letter-spacing:-.055em}
-.feature-head p{max-width:39rem}
-.feature-head .actions a{color:white}
-.feature-head .actions .primary{color:var(--ink);background:var(--yellow);border-radius:.6rem;padding:.4rem .9rem;text-decoration:none}
-.feature-body{display:grid;gap:1rem;padding:0 clamp(1rem,4vw,2rem) 1.5rem}
-.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem}
-.metric{display:grid;gap:.25rem;align-content:start;padding:.8rem;border-radius:.65rem;background:var(--canvas)}
-.metric strong{font-size:clamp(1.45rem,4vw,2.35rem);line-height:1;letter-spacing:-.045em}
-.metric span{font-size:.875rem}
-.work-demo{border:1px solid var(--line);border-radius:.7rem;padding:.75rem 1rem}
-.work-demo summary{min-height:44px;display:list-item;padding:.55rem 0;font-weight:700;cursor:pointer}
-.work-demo p{padding-bottom:.65rem}
-.reel{display:block;width:min(100%,21rem);max-height:70vh;aspect-ratio:9/16;background:#1d1735;border-radius:.55rem;margin:.4rem 0 .75rem}
-figure img{display:block;width:100%;height:auto;border-radius:.55rem}
-figcaption{font-size:.8rem;color:#514663;margin-top:.45rem}
-.more{margin-top:1.6rem}
-.more h2{font-size:clamp(1.65rem,4vw,2.25rem);margin-bottom:.85rem}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
-.card{display:grid;align-content:start;gap:.75rem;background:var(--surface);border:1px solid var(--line);border-radius:.9rem;padding:1rem}
-.card h3{font-size:1.35rem}
-.card img{height:11rem;object-fit:contain;background:#faf9fe;border:1px solid #eeeaf5}
-.card .kicker{color:var(--violet)}
-footer{font-size:.85rem;color:#514663;margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--line)}
-@media(max-width:760px){.workspace{grid-template-columns:minmax(0,1fr)}.profile{grid-template-columns:auto minmax(0,1fr);gap:.6rem .85rem}.profile .actions{grid-column:1/-1}.profile img{width:3.5rem;height:3.5rem}.profile p{margin-top:.3rem}}
-@media(max-width:510px){.grid,.metrics{grid-template-columns:minmax(0,1fr)}.metric{grid-template-columns:4.4rem minmax(0,1fr);align-items:center}.feature-head{padding:1.1rem}.card img{height:13rem}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jose Navarro, bachiller en Ciencia Política y Gobierno por la PUCP. Proyectos sobre inversión pública, pobreza y economía en el Perú.">
+  <title>Jose Navarro · Portafolio</title>
+  <link rel="stylesheet" href="portafolio.css">
 </head>
 <body>
-<a class="skip" href="#contenido">Ir al contenido</a>
-<div class="shell">
-  <header>
-    <a class="brand" href="#perfil"><span class="monogram" aria-hidden="true">JN</span> Jose Navarro</a>
-    <nav aria-label="Secciones"><a href="#obras">Obras públicas</a><a href="#proyectos">Otros proyectos</a></nav>
-  </header>
-  <div class="workspace">
-    <aside class="profile" id="perfil" aria-labelledby="nombre">
-      <img src="retrato.jpg" width="80" height="80" alt="Jose Navarro en su graduación">
-      <div>
-        <h1 id="nombre">Jose Navarro</h1>
-        <p>Me interesan la gestión pública y el análisis de políticas en el Perú. Trabajo con información pública para entender cómo se ejecutan las inversiones y qué servicios siguen pendientes.</p>
+  <a class="skip" href="#proyectos">Ir a los proyectos</a>
+  <main class="page">
+    <header class="intro">
+      <div class="identity">
+        <h1>Jose Navarro</h1>
+        <p class="degree">Bachiller en Ciencia Política y Gobierno <span>· PUCP</span></p>
+        <p class="bio">Tengo experiencia en monitoreo de proyectos sociales. Me interesa cómo se ejecutan las políticas públicas y qué nos dicen los datos sobre sus resultados en el Perú.</p>
+        <div class="contacts" aria-label="CV y perfiles profesionales">
+          <a class="cv" href="cv-jose-navarro.pdf" aria-label="CV en PDF">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 2.75h8.5L19 7.25v14H6zM14 3v5h5M9 12h7M9 15h7M9 18h4"/></svg>
+            <span>CV</span>
+          </a>
+          <a href="https://www.linkedin.com/in/jpnavarro22/" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.53v16.94c0 .85.69 1.53 1.55 1.53h16.9c.86 0 1.55-.68 1.55-1.53V3.53c0-.85-.69-1.53-1.55-1.53ZM7.93 19H5V9.53h2.93V19ZM6.47 8.24a1.7 1.7 0 1 1 0-3.4 1.7 1.7 0 0 1 0 3.4ZM19 19h-2.93v-4.61c0-1.1-.02-2.52-1.53-2.52-1.54 0-1.78 1.2-1.78 2.44V19H9.83V9.53h2.81v1.29h.04a3.08 3.08 0 0 1 2.77-1.52c2.96 0 3.55 1.95 3.55 4.49V19Z"/></svg>
+          </a>
+          <a href="https://github.com/bocchienjoyer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.014-1.128-.014-2.049-3.025.564-3.809-.742-4.057-1.43-.124-.317-.66-1.293-1.127-1.554-.385-.207-.935-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.681-.302-5.486-1.34-5.486-5.966 0-1.32.467-2.406 1.237-3.258-.124-.302-.55-1.54.124-3.19 0 0 1.003-.316 3.3 1.238a11.45 11.45 0 0 1 3.025-.407c1.031 0 2.062.138 3.025.407 2.296-1.568 3.3-1.238 3.3-1.238.674 1.65.248 2.888.124 3.19.77.852 1.237 1.924 1.237 3.258 0 4.64-2.819 5.664-5.5 5.966.44.385.825 1.114.825 2.255 0 1.636-.014 2.956-.014 3.368 0 .289.206.632.756.522A11.02 11.02 0 0 0 23 12c0-6.077-4.923-11-11-11Z"/></svg>
+          </a>
+        </div>
       </div>
-      <div class="actions"><a href="cv-jose-navarro.pdf">CV en PDF</a><a href="https://www.linkedin.com/in/jpnavarro22/">LinkedIn</a><a href="https://github.com/bocchienjoyer">GitHub</a></div>
-    </aside>
-    <main id="contenido">
-      <article id="obras" class="feature" aria-labelledby="titulo-obras">
-        <div class="feature-head">
-          <p class="kicker">Inversión pública · Perú</p>
-          <h2 id="titulo-obras">Obras que esperan</h2>
-          <p>¿Qué sabemos de las obras públicas paralizadas que ya superaron el 90 % de avance físico?</p>
-          <div class="actions"><a class="primary" href="https://obras-que-esperan-peru.fancyperch2.chatgpt.site">Explorar el tablero ↗</a><a href="https://github.com/bocchienjoyer/python_intermedio/tree/main/tarea_3">Informe y código ↗</a></div>
-        </div>
-        <div class="feature-body">
-          <div class="metrics" aria-label="Hallazgos al 30 de junio de 2026">
-            <div class="metric"><strong>2.262</strong><span>obras en el inventario de paralizadas</span></div>
-            <div class="metric"><strong>281</strong><span>obras con más del 90 % de avance físico</span></div>
-            <div class="metric"><strong>155</strong><span>de esas 281, con código de inversión y sin asignación registrada para 2026</span></div>
-          </div>
-          <figure><a href="https://obras-que-esperan-peru.fancyperch2.chatgpt.site"><img src="obras.png" alt="Tablero de obras paralizadas con mapa departamental y gráficos por tipo de infraestructura"></a><figcaption>Inventario de la Contraloría al 30 de junio de 2026.</figcaption></figure>
-          <details class="work-demo" id="demo">
-            <summary>Ver el resumen en video · 57 s</summary>
-            <video class="reel" controls playsinline preload="none" aria-label="Resumen de Obras que esperan">
-              <source src="obras-reel.mp4" type="video/mp4">
-              <a href="obras-reel.mp4">Abrir el video</a>
-            </video>
-            <p>Video con subtítulos y narración generada con IA a partir de mi voz. <a href="https://github.com/bocchienjoyer/python_intermedio/blob/main/tarea_3/reel/recursos/creditos.md">Créditos y licencias</a>.</p>
-          </details>
-          <details class="work-demo">
-            <summary>¿Cómo se llega a las 155 obras?</summary>
-            <p>De las 281 obras con más del 90 % de avance, 267 tienen código de inversión. Entre estas, 155 carecen de asignación presupuestaria registrada y 112 sí la tienen. Las 14 sin código se mantienen como un grupo aparte.</p>
-            <p>El avance físico es el registrado en el inventario. Por sí solo, no indica si la obra presta servicio.</p>
-          </details>
-        </div>
-      </article>
-      <section class="more" id="proyectos" aria-labelledby="titulo-proyectos">
-        <h2 id="titulo-proyectos">Otros proyectos</h2>
-        <div class="grid">
-          <article class="card">
-            <p class="kicker">Condiciones de vida</p>
-            <h3>Pobreza monetaria en el Perú</h3>
-            <p>¿Se puede reproducir la tasa nacional con los microdatos de la ENAHO 2024? La estimación con sumaria fue de <strong>27,58 %</strong>, frente al 27,6 % de referencia.</p>
-            <figure><img src="enaho.png" alt="Mapa departamental de pobreza monetaria en Perú según la ENAHO 2024" loading="lazy"></figure>
-            <div class="actions"><a href="https://github.com/bocchienjoyer/enaho_skills">Código y metodología ↗</a></div>
-          </article>
-          <article class="card">
-            <p class="kicker">Economía peruana</p>
-            <h3>Consultas a las series del BCRP</h3>
-            <p>¿Qué cambia cuando un asistente puede consultar las series del banco central? Acertó <strong>9 de 10 preguntas</strong> con acceso a las series y 1 de 10 al responder de memoria con instrucción de abstenerse.</p>
-            <figure><img src="bcrp.png" alt="Comparación de aciertos en preguntas sobre series del BCRP" loading="lazy"></figure>
-            <div class="actions"><a href="https://github.com/bocchienjoyer/mcp-bcrp">Código y evaluación ↗</a></div>
-          </article>
-        </div>
-      </section>
-    </main>
-  </div>
-  <footer>Jose Navarro · Perú</footer>
-</div>
+      <img class="portrait" src="retrato.jpg" alt="Jose Navarro en su graduación" width="160" height="160">
+    </header>
+    <section id="proyectos" aria-labelledby="titulo-proyectos">
+      <h2 class="section-title" id="titulo-proyectos">Proyectos seleccionados</h2>
+      <div class="projects">
+        <article class="project">
+          <p class="category"><span>01</span> Inversión pública</p>
+          <a class="cover works" href="obras.html" aria-label="Ver proyecto Obras que esperan">
+            <svg viewBox="0 0 360 206" role="img" aria-label="281 de las 2.262 obras paralizadas superaban el 90 % de avance">
+              <g fill="none" stroke="#9ab1eb" opacity=".45"><path d="M24 48h312M24 81h312M24 114h312M24 147h312M24 180h312"/><path d="M24 39v141m78-141v141m78-141v141m78-141v141m78-141v141"/></g>
+              <text x="24" y="30" class="figure-label">INVENTARIO · JUN. 2026</text>
+              <text x="24" y="126" class="figure-number">281</text>
+              <text x="25" y="153" class="figure-label">OBRAS CON &gt;90 % DE AVANCE</text>
+              <rect x="24" y="170" width="312" height="10" rx="2" fill="#7490d7"/><rect x="24" y="170" width="38.76" height="10" rx="2" fill="#f3df81"/>
+              <text x="336" y="198" text-anchor="end" class="figure-small">281 de 2.262</text>
+            </svg>
+          </a>
+          <h3>Obras que esperan</h3>
+          <p>¿Qué pasa con las obras públicas paralizadas que están cerca de terminar? Entre las 281 con más del 90 % de avance, <strong>155 tenían código de inversión y carecían de asignación registrada para 2026</strong>.</p>
+          <div class="project-links"><a href="obras.html">Ver proyecto <span aria-hidden="true">↗</span></a><a href="https://github.com/bocchienjoyer/python_intermedio/tree/main/tarea_3">Código</a></div>
+        </article>
+        <article class="project">
+          <p class="category"><span>02</span> Condiciones de vida</p>
+          <a class="cover poverty" href="https://github.com/bocchienjoyer/enaho_skills" aria-label="Ver proyecto Pobreza monetaria en el Perú">
+            <svg viewBox="0 0 360 206" role="img" aria-label="Estimación de pobreza monetaria nacional de 27,58 % con ENAHO 2024">
+              <text x="24" y="30" class="figure-label">ENAHO · 2024</text>
+              <circle cx="180" cy="110" r="62" fill="none" stroke="#e4bba9" stroke-width="15"/>
+              <circle cx="180" cy="110" r="62" fill="none" stroke="#9b351f" stroke-width="15" pathLength="100" stroke-dasharray="27.58 72.42" transform="rotate(-90 180 110)"/>
+              <text x="180" y="119" text-anchor="middle" class="figure-value">27,58 %</text>
+              <text x="180" y="141" text-anchor="middle" class="figure-small">estimación nacional</text>
+            </svg>
+          </a>
+          <h3>Pobreza monetaria en el Perú</h3>
+          <p>¿Se puede reproducir la tasa nacional con los microdatos de la ENAHO? Con la base sumaria, la estimación fue de <strong>27,58 %</strong>, frente al 27,6 % de referencia.</p>
+          <div class="project-links"><a href="https://github.com/bocchienjoyer/enaho_skills">Método y código <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="project">
+          <p class="category"><span>03</span> Economía peruana</p>
+          <a class="cover economy" href="https://github.com/bocchienjoyer/mcp-bcrp" aria-label="Ver proyecto Consultas a las series del BCRP">
+            <svg viewBox="0 0 360 206" role="img" aria-label="Nueve aciertos con acceso a las series del BCRP y uno en la prueba de memoria">
+              <text x="24" y="30" class="figure-label">EVALUACIÓN · 10 PREGUNTAS</text>
+              <text x="24" y="75" class="figure-small">Con acceso a las series</text>
+              <rect x="24" y="85" width="256" height="18" rx="2" fill="#a9aebc"/><rect x="24" y="85" width="230.4" height="18" rx="2" fill="#293756"/>
+              <text x="336" y="100" text-anchor="end" class="figure-label">9 / 10</text>
+              <text x="24" y="143" class="figure-small">De memoria</text>
+              <rect x="24" y="153" width="256" height="18" rx="2" fill="#a9aebc"/><rect x="24" y="153" width="25.6" height="18" rx="2" fill="#293756"/>
+              <text x="336" y="168" text-anchor="end" class="figure-label">1 / 10</text>
+            </svg>
+          </a>
+          <h3>Consultas a las series del BCRP</h3>
+          <p>¿Mejora un asistente cuando puede consultar las series del banco central? Acertó <strong>9 de 10</strong>, frente a 1 de 10 al responder de memoria con instrucción de abstenerse.</p>
+          <div class="project-links"><a href="https://github.com/bocchienjoyer/mcp-bcrp">Evaluación y código <span aria-hidden="true">↗</span></a></div>
+        </article>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
