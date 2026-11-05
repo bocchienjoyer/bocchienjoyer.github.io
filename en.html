@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jose Navarro holds a bachelor’s degree in Political Science and Government from PUCP. His projects cover public investment, poverty, and the Peruvian economy.">
+  <title>Jose Navarro · Portfolio</title>
+  <style>
+:root{color-scheme:light;--paper:#faf9f5;--ink:#1d2540;--quiet:#4e5366;--rule:#b9b9ba;--link:#254393}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.55 system-ui,sans-serif}
+a{color:var(--link);text-underline-offset:.19em}
+a:hover{color:#912c19}
+a:focus-visible{outline:3px solid #a73b24;outline-offset:4px}
+.skip{position:absolute;top:.6rem;left:.6rem;z-index:2;background:white;padding:.7rem;transform:translateY(-180%)}
+.skip:focus{transform:none}
+.page{max-width:82rem;margin:auto;padding:clamp(1.15rem,4vw,3rem) clamp(1rem,5vw,4rem) 3rem}
+h1,h2,h3,p,figure{margin:0}
+.intro{display:grid;grid-template-columns:minmax(0,1fr) clamp(5rem,15vw,10rem);align-items:center;gap:1rem 2rem;padding:clamp(.7rem,3vw,2rem) 0 clamp(1.1rem,3vw,2rem)}
+h1{font-size:clamp(2.2rem,6.7vw,5.65rem);line-height:.95;letter-spacing:-.065em;font-weight:850}
+.degree{font-size:clamp(1.02rem,2.1vw,1.32rem);font-weight:720;margin-top:.7rem}
+.degree span{color:var(--quiet);white-space:nowrap;font-weight:500}
+.bio{max-width:40rem;margin-top:.7rem;color:var(--quiet)}
+.portrait{width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:50%;border:1px solid var(--rule)}
+.contacts{display:flex;gap:.55rem;margin-top:.85rem}
+.contacts a{display:inline-flex;align-items:center;justify-content:center;gap:.25rem;min-width:44px;min-height:44px;padding:0 .52rem;color:var(--ink);border:1px solid var(--rule);border-radius:3px;text-decoration:none}
+.contacts a:hover{background:#e5eaf7;color:var(--link)}
+.contacts svg{width:22px;height:22px}
+.contacts .cv{font-weight:750}
+h1{color:#182a55}
+.contacts a{border-color:#dfddea}
+.contacts .cv{background:#ffecd6;color:#854211}
+.contacts a[aria-label="LinkedIn"]{background:#e3f3fc;color:#075b8f}
+.contacts a[aria-label="GitHub"]{background:#ede7fa;color:#4b2b77}
+.contacts a:hover{outline:2px solid currentColor;outline-offset:2px}
+#projects{padding-top:clamp(1rem,3vw,2rem)}
+.section-heading{margin:0 0 .7rem}
+.section-heading h2{font-size:clamp(1.55rem,3.4vw,2.55rem);line-height:1.06;letter-spacing:-.052em}
+.projects{display:grid;gap:clamp(.85rem,1.8vw,1.4rem)}
+.project{display:grid;grid-template-columns:minmax(5rem, .26fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(.9rem,3vw,2.5rem);align-items:center;padding:clamp(.9rem,2.7vw,1.9rem);background:var(--project-paper)}
+
+.works{--dark:#65470b;--project-paper:#f4ead0;--picture:url('obra-referencial.jpg')}
+.poverty{--dark:#853b24;--project-paper:#f5e2da;--picture:url('enaho.png')}
+.economy{--dark:#135447;--project-paper:#dcefe8;--picture:url('flujo-bcrp.svg')}
+.category{display:grid;gap:.45rem;align-self:start;font-size:.74rem;font-weight:700;color:var(--dark);line-height:1.3;padding-top:.2rem}
+.category span{font-size:clamp(1.6rem,3vw,2.65rem);font-weight:760;line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.06em}
+.project-text{display:grid;gap:.55rem;align-content:center}
+.project h3{font-size:clamp(1.45rem,2.75vw,2.45rem);line-height:1.02;letter-spacing:-.045em}
+.project-text>p{font-size:.97rem;color:#41465a}
+.project-text>p.question{font-weight:650;color:var(--dark)}
+.project strong{color:var(--ink)}
+.evidence{isolation:isolate;position:relative;overflow:hidden;display:grid;gap:.45rem;align-content:start;min-height:13.5rem;padding:clamp(1rem,2vw,1.5rem);color:#fff;line-height:1.28;font-size:.86rem}
+.evidence figcaption{font:700 .72rem/1.35 ui-monospace,Consolas,monospace;letter-spacing:.06em;text-transform:uppercase}
+.works-visual{background:#f0cd61;color:#17243c}
+.works-visual::before,.survey-visual::before,.answers-visual::before{content:"";position:absolute;inset:0;z-index:-1;background-size:cover;background-repeat:no-repeat}
+.works-visual::before{background-image:linear-gradient(90deg,#f0cd61 11%,transparent 94%),var(--picture);background-position:center,center 61%;opacity:.37}
+.progress-number,.survey-number{font-size:clamp(2.9rem,5.4vw,4.2rem);font-weight:850;letter-spacing:-.075em;line-height:.95;font-variant-numeric:tabular-nums}
+.progress-number{margin-top:.35rem}
+.progress-number span,.survey-number span{font-size:.55em;letter-spacing:0}
+.record-label{font-size:.82rem;font-weight:650}
+.stamp{justify-self:start;margin-top:.2rem;padding:.2rem .5rem;border:2px solid #7d251b;color:#7d251b;background:#f0cd61;font-weight:820;letter-spacing:.065em;transform:rotate(-3deg)}
+.survey-visual{background:#8c351e}
+.survey-visual::before{background-image:linear-gradient(90deg,#8c351e 6%,transparent 88%),var(--picture);background-position:center,right 48%;background-size:cover,83% auto;opacity:.25;filter:grayscale(1)}
+.workflow{list-style:none;padding:0;margin:.22rem 0;display:flex;flex-wrap:wrap;gap:.2rem .45rem;font-weight:690}
+.workflow li+li::before{content:"→";margin-right:.45rem;color:#ffd698}
+.survey-number{margin-top:.45rem}
+.answers-visual{background:#114c43}
+.answers-visual::before{background-image:var(--picture);background-position:right bottom;background-size:auto 96%;opacity:.11}
+.dot-score{display:grid;gap:.45rem;margin-top:.45rem}
+.dot-score>div:not(.dot-row){display:flex;justify-content:space-between;gap:.4rem}
+.dot-score b{white-space:nowrap}
+.dot-row{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:clamp(.15rem,.7vw,.45rem);max-width:17rem;margin-bottom:.2rem}
+.dot-row i{aspect-ratio:1;display:block;border-radius:50%;border:1px solid #93b5ad}
+.dot-row.nine i:nth-child(-n+9),.dot-row.one i:first-child{background:#cbf687;border-color:#cbf687}
+.project-links{display:flex;flex-wrap:wrap;gap:.15rem .9rem}
+.project .project-links a{color:var(--dark);text-decoration-thickness:1px}.project .project-links a:hover{text-decoration-thickness:2px}
+.project-links a,.back{display:inline-flex;align-items:center;gap:.35rem;min-height:44px;font-weight:700;font-size:.92rem}
+@media(max-width:880px){
+  .project{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:.65rem 1rem}
+  .category{grid-column:1/-1;display:flex;align-items:baseline;gap:.5rem}
+  .category span{font-size:1.15rem;letter-spacing:-.02em}
+}
+@media(max-width:620px){.project{grid-template-columns:minmax(0,1fr);gap:.55rem}.project-text{gap:.45rem}.evidence{min-height:12.7rem}}
+@media(max-width:440px){.intro{grid-template-columns:minmax(0,1fr) 3.85rem;gap:.65rem;align-items:start}.portrait{margin-top:.15rem}.bio{font-size:.95rem}.degree span{white-space:normal}}
+  .language-nav{display:flex;justify-content:flex-end}
+.language-toggle{display:inline-flex;min-height:44px;align-items:center;padding:0 .8rem;border:1px solid #b9c4d9;color:#254393;background:#edf1fa;font-weight:700;font-size:.88rem;text-decoration:none}
+.language-toggle:hover{background:#dfe8fa;color:#182a55}
+.project-links .code-icon{min-width:44px;justify-content:center}.code-icon svg{width:22px;height:22px}.code-icon:hover{background:#ffffff80}
+</style>
+<link rel="alternate" hreflang="es" href="./">
+</head>
+<body>
+  <a class="skip" href="#projects">Skip to projects</a>
+  <main class="page">
+    <nav class="language-nav" aria-label="Language"><a class="language-toggle" href="./" lang="es" hreflang="es">Español</a></nav>
+    <header class="intro">
+      <div class="identity">
+        <h1>Jose Navarro</h1>
+        <p class="degree">BA in Political Science and Government <span>· PUCP</span></p>
+        <p class="bio">I have experience monitoring social programs. I’m interested in how public policies are put into practice in Peru and what the evidence tells us about their results.</p>
+        <div class="contacts" aria-label="CV and professional profiles">
+          <a class="cv" href="cv-jose-navarro.pdf" aria-label="CV (PDF, in Spanish)">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 2.75h8.5L19 7.25v14H6zM14 3v5h5M9 12h7M9 15h7M9 18h4"/></svg>
+            <span>CV</span>
+          </a>
+          <a href="https://www.linkedin.com/in/jpnavarro22/" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.53v16.94c0 .85.69 1.53 1.55 1.53h16.9c.86 0 1.55-.68 1.55-1.53V3.53c0-.85-.69-1.53-1.55-1.53ZM7.93 19H5V9.53h2.93V19ZM6.47 8.24a1.7 1.7 0 1 1 0-3.4 1.7 1.7 0 0 1 0 3.4ZM19 19h-2.93v-4.61c0-1.1-.02-2.52-1.53-2.52-1.54 0-1.78 1.2-1.78 2.44V19H9.83V9.53h2.81v1.29h.04a3.08 3.08 0 0 1 2.77-1.52c2.96 0 3.55 1.95 3.55 4.49V19Z"/></svg>
+          </a>
+          <a href="https://github.com/bocchienjoyer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.014-1.128-.014-2.049-3.025.564-3.809-.742-4.057-1.43-.124-.317-.66-1.293-1.127-1.554-.385-.207-.935-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.681-.302-5.486-1.34-5.486-5.966 0-1.32.467-2.406 1.237-3.258-.124-.302-.55-1.54.124-3.19 0 0 1.003-.316 3.3 1.238a11.45 11.45 0 0 1 3.025-.407c1.031 0 2.062.138 3.025.407 2.296-1.568 3.3-1.238 3.3-1.238.674 1.65.248 2.888.124 3.19.77.852 1.237 1.924 1.237 3.258 0 4.64-2.819 5.664-5.5 5.966.44.385.825 1.114.825 2.255 0 1.636-.014 2.956-.014 3.368 0 .289.206.632.756.522A11.02 11.02 0 0 0 23 12c0-6.077-4.923-11-11-11Z"/></svg>
+          </a>
+        </div>
+      </div>
+      <img class="portrait" src="retrato.jpg" alt="Jose Navarro at his graduation" width="160" height="160">
+    </header>
+    <section id="projects" aria-labelledby="titulo-proyectos">
+      <div class="section-heading"><h2 id="titulo-proyectos">Completed projects</h2></div>
+      <div class="projects">
+        <article class="project works">
+          <p class="category"><span>01</span> Public investment</p>
+          <div class="project-text">
+            <h3>Public works on hold</h3>
+            <p class="question">How many projects were listed as stalled even after reporting 100% completion?</p>
+            <p>Peru’s Comptroller General listed <strong>23 public works projects</strong> in this situation. The records show construction progress and project status. They do not show whether the facilities were in use.</p>
+            <div class="project-links"><a href="obras-en.html">Case study and video <span aria-hidden="true">↗</span></a><a class="code-icon" href="https://github.com/bocchienjoyer/python_intermedio/tree/main/tarea_3" aria-label="Public works project code on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.014-1.128-.014-2.049-3.025.564-3.809-.742-4.057-1.43-.124-.317-.66-1.293-1.127-1.554-.385-.207-.935-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.681-.302-5.486-1.34-5.486-5.966 0-1.32.467-2.406 1.237-3.258-.124-.302-.55-1.54.124-3.19 0 0 1.003-.316 3.3 1.238a11.45 11.45 0 0 1 3.025-.407c1.031 0 2.062.138 3.025.407 2.296-1.568 3.3-1.238 3.3-1.238.674 1.65.248 2.888.124 3.19.77.852 1.237 1.924 1.237 3.258 0 4.64-2.819 5.664-5.5 5.966.44.385.825 1.114.825 2.255 0 1.636-.014 2.956-.014 3.368 0 .289.206.632.756.522A11.02 11.02 0 0 0 23 12c0-6.077-4.923-11-11-11Z"/></svg></a></div>
+          </div>
+          <figure class="evidence works-visual">
+            <figcaption>Comptroller General’s inventory · June 2026</figcaption>
+            <div class="progress-number">100<span>%</span></div>
+            <div class="record-label">Reported construction progress</div>
+            <div class="stamp">STATUS: STALLED</div>
+          </figure>
+        </article>
+        <article class="project poverty">
+          <p class="category"><span>02</span> Living standards</p>
+          <div class="project-text">
+            <h3>Mapping poverty from household survey data</h3>
+            <p class="question">Can an AI assistant process the survey and reproduce the official poverty rate?</p>
+            <p>Three reusable <em>skills</em> guide the assistant through cleaning, charting, and mapping data from Peru’s National Household Survey. The estimated national poverty rate was <strong>27.58%</strong>.</p>
+            <div class="project-links"><a class="code-icon" href="https://github.com/bocchienjoyer/enaho_skills" aria-label="Poverty mapping project code on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.014-1.128-.014-2.049-3.025.564-3.809-.742-4.057-1.43-.124-.317-.66-1.293-1.127-1.554-.385-.207-.935-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.681-.302-5.486-1.34-5.486-5.966 0-1.32.467-2.406 1.237-3.258-.124-.302-.55-1.54.124-3.19 0 0 1.003-.316 3.3 1.238a11.45 11.45 0 0 1 3.025-.407c1.031 0 2.062.138 3.025.407 2.296-1.568 3.3-1.238 3.3-1.238.674 1.65.248 2.888.124 3.19.77.852 1.237 1.924 1.237 3.258 0 4.64-2.819 5.664-5.5 5.966.44.385.825 1.114.825 2.255 0 1.636-.014 2.956-.014 3.368 0 .289.206.632.756.522A11.02 11.02 0 0 0 23 12c0-6.077-4.923-11-11-11Z"/></svg></a></div>
+          </div>
+          <figure class="evidence survey-visual">
+            <figcaption>Peru’s National Household Survey · 2024</figcaption>
+            <ol class="workflow"><li>Clean</li><li>Chart</li><li>Map</li></ol>
+            <div class="survey-number">27.58<span>%</span></div>
+            <div class="record-label">2024 poverty rate · Official estimate: 27.6%</div>
+          </figure>
+        </article>
+        <article class="project economy">
+          <p class="category"><span>03</span> Peruvian economy</p>
+          <div class="project-text">
+            <h3>Inflation and exchange rates, straight from the source</h3>
+            <p class="question">Can an AI assistant find the official figure for a specific date?</p>
+            <p>An MCP connector searches Peru’s central bank database, retrieves figures by date, and links to the source. The assistant answered <strong>9 out of 10</strong> test questions correctly.</p>
+            <div class="project-links"><a class="code-icon" href="https://github.com/bocchienjoyer/mcp-bcrp" aria-label="Central bank connector code on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.014-1.128-.014-2.049-3.025.564-3.809-.742-4.057-1.43-.124-.317-.66-1.293-1.127-1.554-.385-.207-.935-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.681-.302-5.486-1.34-5.486-5.966 0-1.32.467-2.406 1.237-3.258-.124-.302-.55-1.54.124-3.19 0 0 1.003-.316 3.3 1.238a11.45 11.45 0 0 1 3.025-.407c1.031 0 2.062.138 3.025.407 2.296-1.568 3.3-1.238 3.3-1.238.674 1.65.248 2.888.124 3.19.77.852 1.237 1.924 1.237 3.258 0 4.64-2.819 5.664-5.5 5.966.44.385.825 1.114.825 2.255 0 1.636-.014 2.956-.014 3.368 0 .289.206.632.756.522A11.02 11.02 0 0 0 23 12c0-6.077-4.923-11-11-11Z"/></svg></a></div>
+          </div>
+          <figure class="evidence answers-visual">
+            <figcaption>10-question test · one filled dot per correct answer</figcaption>
+            <div class="dot-score">
+              <div><span>With the connector</span><b>9 out of 10</b></div>
+              <div class="dot-row nine" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div><span>From memory</span><b>1 out of 10</b></div>
+              <div class="dot-row one" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+          </figure>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -82,11 +82,17 @@ h1{color:#182a55}
 }
 @media(max-width:620px){.project{grid-template-columns:minmax(0,1fr);gap:.55rem}.project-text{gap:.45rem}.evidence{min-height:12.7rem}}
 @media(max-width:440px){.intro{grid-template-columns:minmax(0,1fr) 3.85rem;gap:.65rem;align-items:start}.portrait{margin-top:.15rem}.bio{font-size:.95rem}.degree span{white-space:normal}}
-  </style>
+  .language-nav{display:flex;justify-content:flex-end}
+.language-toggle{display:inline-flex;min-height:44px;align-items:center;padding:0 .8rem;border:1px solid #b9c4d9;color:#254393;background:#edf1fa;font-weight:700;font-size:.88rem;text-decoration:none}
+.language-toggle:hover{background:#dfe8fa;color:#182a55}
+.project-links .code-icon{min-width:44px;justify-content:center}.code-icon svg{width:22px;height:22px}.code-icon:hover{background:#ffffff80}
+</style>
+<link rel="alternate" hreflang="en" href="en.html">
 </head>
 <body>
   <a class="skip" href="#proyectos">Ir a los proyectos</a>
   <main class="page">
+    <nav class="language-nav" aria-label="Idioma"><a class="language-toggle" href="en.html" lang="en" hreflang="en">English</a></nav>
     <header class="intro">
       <div class="identity">
         <h1>Jose Navarro</h1>
@@ -116,7 +122,7 @@ h1{color:#182a55}
             <h3>Obras que esperan</h3>
             <p class="question">¿Cuántas obras reportaban 100 % de avance y seguían paralizadas?</p>
             <p><strong>23 obras</strong>, según el inventario de Contraloría. El registro consigna el avance físico y la paralización, pero no informa si prestan servicio.</p>
-            <div class="project-links"><a href="obras.html">Ver el caso y el video <span aria-hidden="true">↗</span></a><a href="https://github.com/bocchienjoyer/python_intermedio/tree/main/tarea_3">Código</a></div>
+            <div class="project-links"><a href="obras.html">Ver el caso y el video <span aria-hidden="true">↗</span></a><a class="code-icon" href="https://github.com/bocchienjoyer/python_intermedio/tree/main/tarea_3" aria-label="Código de Obras que esperan en GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.014-1.128-.014-2.049-3.025.564-3.809-.742-4.057-1.43-.124-.317-.66-1.293-1.127-1.554-.385-.207-.935-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.681-.302-5.486-1.34-5.486-5.966 0-1.32.467-2.406 1.237-3.258-.124-.302-.55-1.54.124-3.19 0 0 1.003-.316 3.3 1.238a11.45 11.45 0 0 1 3.025-.407c1.031 0 2.062.138 3.025.407 2.296-1.568 3.3-1.238 3.3-1.238.674 1.65.248 2.888.124 3.19.77.852 1.237 1.924 1.237 3.258 0 4.64-2.819 5.664-5.5 5.966.44.385.825 1.114.825 2.255 0 1.636-.014 2.956-.014 3.368 0 .289.206.632.756.522A11.02 11.02 0 0 0 23 12c0-6.077-4.923-11-11-11Z"/></svg></a></div>
           </div>
           <figure class="evidence works-visual">
             <figcaption>Inventario de Contraloría · junio de 2026</figcaption>
@@ -131,7 +137,7 @@ h1{color:#182a55}
             <h3>Pobreza: de la encuesta al mapa</h3>
             <p class="question">¿Puede una IA procesar la encuesta y reproducir la cifra oficial de pobreza?</p>
             <p>Tres <em>skills</em> guían la limpieza, los gráficos y el mapa de la Encuesta Nacional de Hogares. La estimación nacional fue de <strong>27,58 %</strong>.</p>
-            <div class="project-links"><a href="https://github.com/bocchienjoyer/enaho_skills">Método y código <span aria-hidden="true">↗</span></a></div>
+            <div class="project-links"><a class="code-icon" href="https://github.com/bocchienjoyer/enaho_skills" aria-label="Código del proyecto de pobreza en GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.014-1.128-.014-2.049-3.025.564-3.809-.742-4.057-1.43-.124-.317-.66-1.293-1.127-1.554-.385-.207-.935-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.681-.302-5.486-1.34-5.486-5.966 0-1.32.467-2.406 1.237-3.258-.124-.302-.55-1.54.124-3.19 0 0 1.003-.316 3.3 1.238a11.45 11.45 0 0 1 3.025-.407c1.031 0 2.062.138 3.025.407 2.296-1.568 3.3-1.238 3.3-1.238.674 1.65.248 2.888.124 3.19.77.852 1.237 1.924 1.237 3.258 0 4.64-2.819 5.664-5.5 5.966.44.385.825 1.114.825 2.255 0 1.636-.014 2.956-.014 3.368 0 .289.206.632.756.522A11.02 11.02 0 0 0 23 12c0-6.077-4.923-11-11-11Z"/></svg></a></div>
           </div>
           <figure class="evidence survey-visual">
             <figcaption>Encuesta Nacional de Hogares · 2024</figcaption>
@@ -146,7 +152,7 @@ h1{color:#182a55}
             <h3>Inflación y tipo de cambio, con fuente</h3>
             <p class="question">¿Puede una IA encontrar la cifra oficial para una fecha concreta?</p>
             <p>Un conector (MCP) busca indicadores del Banco Central de Reserva del Perú, recupera valores por fecha y enlaza la fuente. En la prueba, la IA acertó <strong>9 de 10</strong> preguntas.</p>
-            <div class="project-links"><a href="https://github.com/bocchienjoyer/mcp-bcrp">Evaluación y código <span aria-hidden="true">↗</span></a></div>
+            <div class="project-links"><a class="code-icon" href="https://github.com/bocchienjoyer/mcp-bcrp" aria-label="Código del conector del BCRP en GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.014-1.128-.014-2.049-3.025.564-3.809-.742-4.057-1.43-.124-.317-.66-1.293-1.127-1.554-.385-.207-.935-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.681-.302-5.486-1.34-5.486-5.966 0-1.32.467-2.406 1.237-3.258-.124-.302-.55-1.54.124-3.19 0 0 1.003-.316 3.3 1.238a11.45 11.45 0 0 1 3.025-.407c1.031 0 2.062.138 3.025.407 2.296-1.568 3.3-1.238 3.3-1.238.674 1.65.248 2.888.124 3.19.77.852 1.237 1.924 1.237 3.258 0 4.64-2.819 5.664-5.5 5.966.44.385.825 1.114.825 2.255 0 1.636-.014 2.956-.014 3.368 0 .289.206.632.756.522A11.02 11.02 0 0 0 23 12c0-6.077-4.923-11-11-11Z"/></svg></a></div>
           </div>
           <figure class="evidence answers-visual">
             <figcaption>Prueba de 10 preguntas · cada punto lleno es un acierto</figcaption>
