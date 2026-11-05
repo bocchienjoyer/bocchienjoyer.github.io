@@ -10,7 +10,9 @@ nav a,.links a{display:inline-flex;align-items:center;min-height:44px}
 .brand{font-weight:750;color:var(--ink);text-decoration:none}
 .skip{position:absolute;top:0;left:1rem;background:white;padding:.5rem;transform:translateY(-110%)}
 .skip:focus{transform:none}
-.hero{padding:clamp(3rem,9vw,7rem) 0;border-bottom:1px solid var(--line)}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(9rem,24%);align-items:center;gap:clamp(1rem,4vw,3rem);padding:clamp(3rem,9vw,7rem) 0;border-bottom:1px solid var(--line)}
+.portrait{grid-column:2;grid-row:1;display:block;width:100%;height:auto;border-radius:.55rem}
+.hero>div{grid-column:1;grid-row:1}
 .eyebrow{font-size:.76rem;font-weight:800;letter-spacing:.13em;color:var(--accent);margin:0 0 .55rem}
 h1,h2,h3{line-height:1.1;margin:0;font-family:Georgia,serif}
 h1{font-size:clamp(3rem,8vw,6.25rem);letter-spacing:-.05em}
@@ -30,4 +32,4 @@ footer{padding:2rem 0;margin-top:3rem;border-top:1px solid var(--line)}
 details{border-bottom:1px solid var(--line);padding:.2rem .3rem}
 details p{margin:.3rem 0 .85rem}
 summary{cursor:pointer;padding:.55rem 0;font-weight:750;color:var(--accent)}
-@media(max-width:650px){article{grid-template-columns:1fr}article figure{order:1}iframe{height:27rem}}
+@media(max-width:650px){.hero,article{grid-template-columns:1fr}.portrait,.hero>div{grid-column:auto;grid-row:auto}.portrait{width:clamp(7rem,30vw,10rem)}article figure{order:1}iframe{height:27rem}}
