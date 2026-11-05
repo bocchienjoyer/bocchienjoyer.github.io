@@ -6,15 +6,20 @@
   <meta name="description" content="Obras que esperan, un proyecto de Jose Navarro sobre las obras públicas paralizadas en el Perú.">
   <title>Obras que esperan · Jose Navarro</title>
   <link rel="stylesheet" href="portafolio.css">
+  <style>
+    .dashboard-link{display:inline-flex;align-items:center;gap:.55rem;min-height:44px;padding:.55rem .9rem;background:#254393;color:#fff;font-weight:700;text-decoration:none}
+    .dashboard-link:hover{background:#1d336d;color:#fff;text-decoration:underline}
+    .case-body .dashboard-action{margin-top:.8rem}
+    .case-source{margin-top:1.2rem;padding-top:.75rem;border-top:1px solid var(--rule);font-size:.88rem;color:var(--quiet)}
+  </style>
 </head>
 <body>
   <main class="page case">
-    <a class="back" href="./">← Volver a los proyectos</a>
+    <a class="back" href="./#proyectos">← Volver a los proyectos</a>
     <header class="case-intro">
       <p class="category">Inversión pública · Perú</p>
       <h1>Obras que esperan</h1>
       <p>Un análisis de las obras públicas que seguían paralizadas pese a su alto avance físico.</p>
-      <div class="project-links"><a href="https://obras-que-esperan-peru.fancyperch2.chatgpt.site/">Explorar el tablero ↗</a><a href="https://github.com/bocchienjoyer/python_intermedio/tree/main/tarea_3">Informe y código ↗</a></div>
     </header>
     <section class="case-body" aria-labelledby="hallazgos">
       <div>
@@ -22,7 +27,11 @@
         <p><strong>23 obras</strong> reportaban el 100 % de avance físico y seguían en la lista de obras paralizadas de la Contraloría al 30 de junio de 2026.</p>
         <p>De las 2.262 obras del inventario, 281 superaban el 90 % de avance. En 267 de esas 281 se pudo identificar la inversión correspondiente y revisar su presupuesto. <strong>155 no registraban una asignación para 2026</strong>.</p>
         <p>El tablero permite buscar una obra por nombre o entidad y comparar los resultados por departamento, tipo de obra, avance y presupuesto.</p>
-        <p><a href="https://www.gob.pe/institucion/contraloria/informes-publicaciones/8489152-informe-de-obras-paralizadas-en-el-territorio-nacional-a-junio-de-2026">Informe y anexos de la Contraloría ↗</a></p>
+        <p class="dashboard-action"><a class="dashboard-link" href="https://obras-que-esperan-peru.fancyperch2.chatgpt.site/">Explorar el tablero <span aria-hidden="true">↗</span></a></p>
+        <footer class="case-source">
+          <p>Fuente de los datos · <a href="https://www.gob.pe/institucion/contraloria/informes-publicaciones/8489152-informe-de-obras-paralizadas-en-el-territorio-nacional-a-junio-de-2026">Informe y anexos de Contraloría</a></p>
+          <p><a href="https://github.com/bocchienjoyer/python_intermedio/tree/main/tarea_3">Método y código del proyecto</a></p>
+        </footer>
       </div>
       <figure class="case-media">
         <video controls playsinline preload="metadata" aria-label="Video explicativo de Obras que esperan">
