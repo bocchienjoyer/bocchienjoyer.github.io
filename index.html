@@ -1,95 +1,131 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portafolio de José Navarro. Datos públicos, análisis reproducible y visualización.">
-  <title>José Navarro | Portafolio de datos</title>
-  <style>
-:root{color-scheme:light;--ink:#152f2a;--muted:#425952;--line:#c9d7cf;--accent:#146247;--paper:#f6f8f3}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Jose Navarro. Proyectos sobre gestión pública, políticas públicas y economía en el Perú.">
+<title>Jose Navarro | Proyectos</title>
+<style>
+:root{--ink:#1d1735;--violet:#49349b;--line:#d8d0ec;--surface:#fff;--canvas:#f1eef9;--yellow:#f6e28e}
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.6 system-ui,sans-serif}
-a{color:var(--accent);text-underline-offset:.2em}
-a:focus-visible,summary:focus-visible{outline:3px solid #ad531b;outline-offset:4px}
-.wrap{width:min(1080px,calc(100% - 2rem));margin-inline:auto}
-.bar{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;border-bottom:1px solid var(--line);padding:.75rem 0}
-nav,.links{display:flex;flex-wrap:wrap;column-gap:1.1rem}
-nav a,.links a{display:inline-flex;align-items:center;min-height:44px}
-.brand{font-weight:750;color:var(--ink);text-decoration:none}
-.skip{position:absolute;top:0;left:1rem;background:white;padding:.5rem;transform:translateY(-110%)}
+body{margin:0;background:var(--canvas);color:var(--ink);font:1rem/1.55 Arial,Helvetica,sans-serif}
+a{color:#3e2b86;text-underline-offset:.2em}
+:focus-visible{outline:3px solid #7547c4;outline-offset:4px}
+.skip{position:absolute;top:.5rem;left:.5rem;z-index:2;background:#fff;padding:.6rem;transform:translateY(-150%)}
 .skip:focus{transform:none}
-.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(9rem,24%);align-items:center;gap:clamp(1rem,4vw,3rem);padding:clamp(3rem,9vw,7rem) 0;border-bottom:1px solid var(--line)}
-.portrait{grid-column:2;grid-row:1;display:block;width:100%;height:auto;border-radius:.55rem}
-.hero>div{grid-column:1;grid-row:1}
-.eyebrow{font-size:.76rem;font-weight:800;letter-spacing:.13em;color:var(--accent);margin:0 0 .55rem}
-h1,h2,h3{line-height:1.1;margin:0;font-family:Georgia,serif}
-h1{font-size:clamp(3rem,8vw,6.25rem);letter-spacing:-.05em}
-h2{font-size:clamp(2rem,5vw,3.4rem);letter-spacing:-.035em}
-h3{font-size:clamp(1.5rem,3.5vw,2.2rem)}
-.intro{font-size:clamp(1rem,2.1vw,1.25rem);color:var(--muted);max-width:42rem}
-.button{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;padding:.35rem 1rem;background:var(--accent);color:white;border-radius:.3rem}
-section+section{margin-top:clamp(2rem,6vw,4rem)}
-article{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(1rem,4vw,3rem);align-items:center;padding:2rem 0;border-bottom:1px solid var(--line)}
-figure{margin:0}
-figure img{display:block;width:100%;height:clamp(14rem,31vw,23rem);object-fit:contain;background:white;border:1px solid var(--line);border-radius:.4rem}
-figcaption,footer{font-size:.88rem;color:var(--muted)}
-figcaption{margin-top:.4rem}
-iframe{display:block;width:100%;height:23rem;border:1px solid var(--line);border-radius:.4rem;margin:1rem 0;background:white}
-footer{padding:2rem 0;margin-top:3rem;border-top:1px solid var(--line)}
-.demo{padding:1rem;background:white}
-details{border-bottom:1px solid var(--line);padding:.2rem .3rem}
-details p{margin:.3rem 0 .85rem}
-summary{cursor:pointer;padding:.55rem 0;font-weight:750;color:var(--accent)}
-@media(max-width:650px){.hero,article{grid-template-columns:1fr}.portrait,.hero>div{grid-column:auto;grid-row:auto}.portrait{width:clamp(7rem,30vw,10rem)}article figure{order:1}iframe{height:27rem}}
-  </style>
+.shell{max-width:82rem;margin:auto;padding:1.15rem clamp(.85rem,4vw,3rem) 2rem}
+header{display:flex;justify-content:space-between;align-items:center;gap:.6rem 1rem;flex-wrap:wrap;padding-bottom:1rem;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:.7rem;font-weight:800;text-decoration:none;color:var(--ink)}
+.monogram{display:grid;place-items:center;width:2.5rem;height:2.5rem;background:var(--yellow);border:1px solid var(--ink);border-radius:.65rem;font-size:.85rem}
+nav,.actions{display:flex;gap:.35rem .9rem;align-items:center;flex-wrap:wrap}
+nav a,.actions a{display:inline-flex;align-items:center;min-height:44px;font-weight:700}
+.workspace{display:grid;grid-template-columns:minmax(0,16rem) minmax(0,1fr);gap:clamp(1rem,3vw,2.5rem);align-items:start;margin-top:1.5rem}
+.profile{display:grid;align-content:start;gap:.9rem;background:var(--surface);border:1px solid var(--line);border-radius:1rem;padding:1rem}
+.profile img{display:block;width:5rem;height:5rem;border-radius:.8rem}
+h1,h2,h3,p,figure{margin:0}
+h1,h2,h3{line-height:1.12}
+h1{font-size:1.7rem;letter-spacing:-.035em}
+.profile p{color:#514663}
+.profile .actions{border-top:1px solid var(--line);padding-top:.4rem}
+.feature{display:grid;gap:1.15rem;background:var(--surface);border:1px solid var(--line);border-radius:1rem;overflow:hidden}
+.feature-head{padding:clamp(1.15rem,5vw,3.2rem);background:var(--violet);color:#fff;display:grid;gap:1rem}
+.kicker{font:bold .75rem/1.4 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.feature-head .kicker{color:var(--yellow)}
+h2{font-size:clamp(2.1rem,5.5vw,4.4rem);letter-spacing:-.055em}
+.feature-head p{max-width:39rem}
+.feature-head .actions a{color:white}
+.feature-head .primary{color:var(--ink);background:var(--yellow);border-radius:.6rem;padding:.4rem .9rem;text-decoration:none}
+.feature-body{display:grid;gap:1rem;padding:0 clamp(1rem,4vw,2rem) 1.5rem}
+.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem}
+.metric{display:grid;gap:.25rem;align-content:start;padding:.8rem;border-radius:.65rem;background:var(--canvas)}
+.metric strong{font-size:clamp(1.45rem,4vw,2.35rem);line-height:1;letter-spacing:-.045em}
+.metric span{font-size:.875rem}
+.work-demo{border:1px solid var(--line);border-radius:.7rem;padding:.75rem 1rem}
+.work-demo summary{min-height:44px;display:list-item;padding:.55rem 0;font-weight:700;cursor:pointer}
+.work-demo p{padding-bottom:.65rem}
+.reel{display:block;width:min(100%,21rem);max-height:70vh;aspect-ratio:9/16;background:#1d1735;border-radius:.55rem;margin:.4rem 0 .75rem}
+figure img{display:block;width:100%;height:auto;border-radius:.55rem}
+figcaption{font-size:.8rem;color:#514663;margin-top:.45rem}
+.more{margin-top:1.6rem}
+.more h2{font-size:clamp(1.65rem,4vw,2.25rem);margin-bottom:.85rem}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.card{display:grid;align-content:start;gap:.75rem;background:var(--surface);border:1px solid var(--line);border-radius:.9rem;padding:1rem}
+.card h3{font-size:1.35rem}
+.card img{height:11rem;object-fit:contain;background:#faf9fe;border:1px solid #eeeaf5}
+.card .kicker{color:var(--violet)}
+footer{font-size:.85rem;color:#514663;margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--line)}
+@media(max-width:760px){.workspace{grid-template-columns:minmax(0,1fr)}.profile{grid-template-columns:auto minmax(0,1fr);gap:.6rem .85rem}.profile .actions{grid-column:1/-1}.profile img{width:3.5rem;height:3.5rem}.profile p{margin-top:.3rem}}
+@media(max-width:510px){.grid,.metrics{grid-template-columns:minmax(0,1fr)}.metric{grid-template-columns:4.4rem minmax(0,1fr);align-items:center}.feature-head{padding:1.1rem}.card img{height:13rem}}
+</style>
 </head>
 <body>
-  <a class="skip" href="#contenido">Ir al contenido</a>
-  <header class="bar wrap">
-    <a class="brand" href="#inicio">José Navarro</a>
-    <nav aria-label="Secciones"><a href="#proyectos">Proyectos</a><a href="#demo">Demo</a></nav>
+<a class="skip" href="#contenido">Ir al contenido</a>
+<div class="shell">
+  <header>
+    <a class="brand" href="#perfil"><span class="monogram" aria-hidden="true">JN</span> Jose Navarro</a>
+    <nav aria-label="Secciones"><a href="#obras">Obras públicas</a><a href="#proyectos">Otros proyectos</a></nav>
   </header>
-  <main id="contenido" class="wrap">
-    <section class="hero" id="inicio" aria-labelledby="nombre">
-      <img class="portrait" src="retrato.jpg" width="160" height="160" alt="José Navarro en su graduación">
+  <div class="workspace">
+    <aside class="profile" id="perfil" aria-labelledby="nombre">
+      <img src="retrato.jpg" width="80" height="80" alt="Jose Navarro en su graduación">
       <div>
-      <p class="eyebrow">PORTAFOLIO / CIENCIA DE DATOS</p>
-      <h1 id="nombre">José Navarro</h1>
-      <p class="intro">Trabajo con datos públicos para responder preguntas sobre economía y territorio.<br>Mis proyectos combinan análisis reproducible, visualización y herramientas de IA.</p>
-      <div class="links"><a class="button" href="cv-jose-navarro.pdf">CV en PDF ↓</a><a href="https://www.linkedin.com/in/jpnavarro22/">LinkedIn ↗</a><a href="https://github.com/bocchienjoyer">GitHub ↗</a></div>
+        <h1 id="nombre">Jose Navarro</h1>
+        <p>Me interesan la gestión pública y el análisis de políticas en el Perú. Trabajo con información pública para entender cómo se ejecutan las inversiones y qué servicios siguen pendientes.</p>
       </div>
-    </section>
-    <section id="proyectos" aria-labelledby="titulo-proyectos">
-      <h2 id="titulo-proyectos">Proyectos seleccionados</h2>
-      <article>
-        <figure><img src="incendios.png" alt="Mapa del Perú con agrupaciones de detecciones satelitales" loading="lazy"><figcaption>Análisis nacional · octubre de 2026</figcaption></figure>
-        <div><p class="eyebrow">01 / ANÁLISIS ESPACIAL</p><h3>Incendios y agricultura en Perú</h3>
-        <p>¿Dónde coinciden las detecciones satelitales, la cercanía a cultivos y las condiciones meteorológicas del escenario base?</p>
-        <p><strong>106 de 131 agrupaciones</strong> estaban a menos de 1 km de superficie agrícola. Una agrupación en Puno cumplió los criterios del escenario base. Es un análisis exploratorio.</p>
-        <div class="links"><a href="https://github.com/bocchienjoyer/incendios-peru-clima-riesgo">Código e informe ↗</a><a href="https://peru-fuego-agricultura.fancyperch2.chatgpt.site">Dashboard completo ↗</a><a href="#demo">Explorar la demo ↓</a></div></div>
+      <div class="actions"><a href="cv-jose-navarro.pdf">CV en PDF</a><a href="https://www.linkedin.com/in/jpnavarro22/">LinkedIn</a><a href="https://github.com/bocchienjoyer">GitHub</a></div>
+    </aside>
+    <main id="contenido">
+      <article id="obras" class="feature" aria-labelledby="titulo-obras">
+        <div class="feature-head">
+          <p class="kicker">Inversión pública · Perú</p>
+          <h2 id="titulo-obras">Obras que esperan</h2>
+          <p>¿Qué sabemos de las obras públicas paralizadas que ya superaron el 90 % de avance físico?</p>
+          <div class="actions"><a class="primary" href="https://obras-que-esperan-peru.fancyperch2.chatgpt.site">Explorar el tablero ↗</a><a href="https://github.com/bocchienjoyer/python_intermedio/tree/main/tarea_3">Informe y código ↗</a></div>
+        </div>
+        <div class="feature-body">
+          <div class="metrics" aria-label="Hallazgos al 30 de junio de 2026">
+            <div class="metric"><strong>2.262</strong><span>obras en el inventario de paralizadas</span></div>
+            <div class="metric"><strong>281</strong><span>obras con más del 90 % de avance físico</span></div>
+            <div class="metric"><strong>155</strong><span>de esas 281, con código de inversión y sin asignación registrada para 2026</span></div>
+          </div>
+          <figure><a href="https://obras-que-esperan-peru.fancyperch2.chatgpt.site"><img src="obras.png" alt="Tablero de obras paralizadas con mapa departamental y gráficos por tipo de infraestructura"></a><figcaption>Inventario de la Contraloría al 30 de junio de 2026.</figcaption></figure>
+          <details class="work-demo" id="demo">
+            <summary>Ver el resumen en video · 57 s</summary>
+            <video class="reel" controls playsinline preload="none" aria-label="Resumen de Obras que esperan">
+              <source src="obras-reel.mp4" type="video/mp4">
+              <a href="obras-reel.mp4">Abrir el video</a>
+            </video>
+            <p>Video con subtítulos y narración generada con IA a partir de mi voz. <a href="https://github.com/bocchienjoyer/python_intermedio/blob/main/tarea_3/reel/recursos/creditos.md">Créditos y licencias</a>.</p>
+          </details>
+          <details class="work-demo">
+            <summary>¿Cómo se llega a las 155 obras?</summary>
+            <p>De las 281 obras con más del 90 % de avance, 267 tienen código de inversión. Entre estas, 155 carecen de asignación presupuestaria registrada y 112 sí la tienen. Las 14 sin código se mantienen como un grupo aparte.</p>
+            <p>El avance físico es el registrado en el inventario. Por sí solo, no indica si la obra presta servicio.</p>
+          </details>
+        </div>
       </article>
-      <article>
-        <figure><img src="enaho.png" alt="Mapa departamental de pobreza monetaria en Perú según la ENAHO 2024" loading="lazy"><figcaption>ENAHO 2024 · estimación departamental</figcaption></figure>
-        <div><p class="eyebrow">02 / ENCUESTAS DE HOGARES</p><h3>Pobreza monetaria con ENAHO 2024</h3>
-        <p>¿Podemos preparar los microdatos de la ENAHO y reproducir la tasa nacional con un flujo verificable?</p>
-        <p>La estimación con sumaria fue de <strong>27,58 %</strong>, frente al 27,6 % de referencia. La base preparada contiene 108 664 residentes.</p>
-        <div class="links"><a href="https://github.com/bocchienjoyer/enaho_skills">Código y metodología ↗</a></div></div>
-      </article>
-      <article>
-        <figure><img src="bcrp.png" alt="Gráfico comparativo de respuestas al consultar series del BCRP" loading="lazy"><figcaption>Evaluación de respuestas · diez preguntas</figcaption></figure>
-        <div><p class="eyebrow">03 / IA Y DATOS OFICIALES</p><h3>Un servidor MCP para el BCRP</h3>
-        <p>¿Mejora un modelo sus respuestas sobre economía peruana cuando puede consultar las series del banco central?</p>
-        <p>Con acceso a las series obtuvo <strong>9 de 10 aciertos</strong>, frente a 1 de 10 en la prueba de memoria con instrucción de abstenerse.</p>
-        <div class="links"><a href="https://github.com/bocchienjoyer/mcp-bcrp">Código y evaluación ↗</a></div></div>
-      </article>
-    </section>
-    <section id="demo" aria-labelledby="titulo-demo">
-      <p class="eyebrow">DEMO INTERACTIVA</p><h2 id="titulo-demo">De 131 agrupaciones a un caso en Puno</h2>
-      <p>Abre cada etapa para ver qué criterio se aplicó en el análisis de incendios.</p>
-      <iframe src="demo.html" title="Demo interactiva del análisis de incendios" loading="lazy"></iframe>
-      <a href="https://peru-fuego-agricultura.fancyperch2.chatgpt.site">Abrir el dashboard completo ↗</a>
-    </section>
-  </main>
-  <footer class="wrap">José Navarro · Portafolio de datos</footer>
+      <section class="more" id="proyectos" aria-labelledby="titulo-proyectos">
+        <h2 id="titulo-proyectos">Otros proyectos</h2>
+        <div class="grid">
+          <article class="card">
+            <p class="kicker">Condiciones de vida</p>
+            <h3>Pobreza monetaria en el Perú</h3>
+            <p>¿Se puede reproducir la tasa nacional con los microdatos de la ENAHO 2024? La estimación con sumaria fue de <strong>27,58 %</strong>, frente al 27,6 % de referencia.</p>
+            <figure><img src="enaho.png" alt="Mapa departamental de pobreza monetaria en Perú según la ENAHO 2024" loading="lazy"></figure>
+            <div class="actions"><a href="https://github.com/bocchienjoyer/enaho_skills">Código y metodología ↗</a></div>
+          </article>
+          <article class="card">
+            <p class="kicker">Economía peruana</p>
+            <h3>Consultas a las series del BCRP</h3>
+            <p>¿Qué cambia cuando un asistente puede consultar las series del banco central? Acertó <strong>9 de 10 preguntas</strong> con acceso a las series y 1 de 10 al responder de memoria con instrucción de abstenerse.</p>
+            <figure><img src="bcrp.png" alt="Comparación de aciertos en preguntas sobre series del BCRP" loading="lazy"></figure>
+            <div class="actions"><a href="https://github.com/bocchienjoyer/mcp-bcrp">Código y evaluación ↗</a></div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer>Jose Navarro · Perú</footer>
+</div>
 </body>
 </html>
