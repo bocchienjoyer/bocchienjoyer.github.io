@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portafolio de José Navarro. Datos públicos, análisis reproducible y visualización.">
+  <title>José Navarro | Portafolio de datos</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <a class="skip" href="#contenido">Ir al contenido</a>
+  <header class="bar wrap">
+    <a class="brand" href="#inicio">José Navarro</a>
+    <nav aria-label="Secciones"><a href="#proyectos">Proyectos</a><a href="#demo">Demo</a></nav>
+  </header>
+  <main id="contenido" class="wrap">
+    <section class="hero" id="inicio" aria-labelledby="nombre">
+      <p class="eyebrow">PORTAFOLIO / CIENCIA DE DATOS</p>
+      <h1 id="nombre">José Navarro</h1>
+      <p class="intro">Trabajo con datos públicos para responder preguntas sobre economía y territorio.<br>Mis proyectos combinan análisis reproducible, visualización y herramientas de IA.</p>
+      <a class="button" href="https://github.com/bocchienjoyer">Perfil de GitHub <span aria-hidden="true">↗</span></a>
+    </section>
+    <section id="proyectos" aria-labelledby="titulo-proyectos">
+      <h2 id="titulo-proyectos">Proyectos seleccionados</h2>
+      <article>
+        <figure><img src="incendios.png" alt="Mapa del Perú con agrupaciones de detecciones satelitales" loading="lazy"><figcaption>Análisis nacional · octubre de 2026</figcaption></figure>
+        <div><p class="eyebrow">01 / ANÁLISIS ESPACIAL</p><h3>Incendios y agricultura en Perú</h3>
+        <p>¿Dónde coinciden las detecciones satelitales, la cercanía a cultivos y las condiciones meteorológicas del escenario base?</p>
+        <p><strong>106 de 131 agrupaciones</strong> estaban a menos de 1 km de superficie agrícola. Una agrupación en Puno cumplió los criterios del escenario base. Es un análisis exploratorio.</p>
+        <div class="links"><a href="https://github.com/bocchienjoyer/incendios-peru-clima-riesgo">Código e informe ↗</a><a href="https://peru-fuego-agricultura.fancyperch2.chatgpt.site">Dashboard completo ↗</a><a href="#demo">Explorar la demo ↓</a></div></div>
+      </article>
+      <article>
+        <figure><img src="enaho.png" alt="Mapa departamental de pobreza monetaria en Perú según la ENAHO 2024" loading="lazy"><figcaption>ENAHO 2024 · estimación departamental</figcaption></figure>
+        <div><p class="eyebrow">02 / ENCUESTAS DE HOGARES</p><h3>Pobreza monetaria con ENAHO 2024</h3>
+        <p>¿Podemos preparar los microdatos de la ENAHO y reproducir la tasa nacional con un flujo verificable?</p>
+        <p>La estimación con sumaria fue de <strong>27,58 %</strong>, frente al 27,6 % de referencia. La base preparada contiene 108 664 residentes.</p>
+        <div class="links"><a href="https://github.com/bocchienjoyer/enaho_skills">Código y metodología ↗</a></div></div>
+      </article>
+      <article>
+        <figure><img src="bcrp.png" alt="Gráfico comparativo de respuestas al consultar series del BCRP" loading="lazy"><figcaption>Evaluación de respuestas · diez preguntas</figcaption></figure>
+        <div><p class="eyebrow">03 / IA Y DATOS OFICIALES</p><h3>Un servidor MCP para el BCRP</h3>
+        <p>¿Mejora un modelo sus respuestas sobre economía peruana cuando puede consultar las series del banco central?</p>
+        <p>Con acceso a las series obtuvo <strong>9 de 10 aciertos</strong>, frente a 1 de 10 en la prueba de memoria con instrucción de abstenerse.</p>
+        <div class="links"><a href="https://github.com/bocchienjoyer/mcp-bcrp">Código y evaluación ↗</a></div></div>
+      </article>
+    </section>
+    <section id="demo" aria-labelledby="titulo-demo">
+      <p class="eyebrow">DEMO INTERACTIVA</p><h2 id="titulo-demo">De 131 detecciones agrupadas a un caso en Puno</h2>
+      <p>Abre cada etapa para ver qué criterio se aplicó en el análisis de incendios.</p>
+      <iframe src="demo.html" title="Demo interactiva del análisis de incendios" loading="lazy"></iframe>
+      <a href="https://peru-fuego-agricultura.fancyperch2.chatgpt.site">Abrir el dashboard completo ↗</a>
+    </section>
+  </main>
+  <footer class="wrap">José Navarro · Portafolio de datos</footer>
+</body>
+</html>
