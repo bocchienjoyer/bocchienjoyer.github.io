@@ -12,15 +12,19 @@
     .case-body .dashboard-action{margin-top:.8rem}
     .case-source{margin-top:1.2rem;padding-top:.75rem;border-top:1px solid var(--rule);font-size:.88rem;color:var(--quiet)}
   .language-nav{display:flex;justify-content:flex-end}
-.language-toggle{display:inline-flex;min-height:44px;align-items:center;padding:0 .8rem;border:1px solid #b9c4d9;color:#254393;background:#edf1fa;font-weight:700;font-size:.88rem;text-decoration:none}
-.language-toggle:hover{background:#dfe8fa;color:#182a55}
-.case-nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.4rem 1rem;margin-bottom:1.1rem}.case-nav .back{margin:0}
+.language-switch{display:inline-flex;border:1px solid #a7b7d3;background:#f3f6fc;border-radius:.38rem}
+.language-toggle{display:grid;min-width:44px;min-height:44px;place-items:center;color:#254393;font-weight:750;font-size:.86rem;text-decoration:none}
+.language-toggle+.language-toggle{border-left:1px solid #a7b7d3}
+.language-toggle:hover{background:#e0eafa;color:#182a55}
+.language-toggle[aria-current="page"]{background:#254393;color:#fff}
+.language-toggle:focus-visible{position:relative;z-index:1}
+.case-nav{display:flex;justify-content:space-between;align-items:center;gap:.4rem 1rem;margin-bottom:1.1rem}.case-nav .back{margin:0}.case-nav .language-nav{margin-left:auto;flex-shrink:0}
 </style>
 <link rel="alternate" hreflang="es" href="obras.html">
 </head>
 <body>
   <main class="page case">
-    <div class="case-nav"><a class="back" href="en.html#projects">← Back to projects</a><nav class="language-nav" aria-label="Language"><a class="language-toggle" href="obras.html" lang="es" hreflang="es">Español</a></nav></div>
+    <div class="case-nav"><a class="back" href="en.html#projects">← Back to projects</a><nav class="language-nav" aria-label="Language"><span class="language-switch"><a class="language-toggle" href="/obras.html" lang="es" hreflang="es" aria-label="Español">ES</a><a class="language-toggle" href="/obras-en.html" lang="en" hreflang="en" aria-label="English" aria-current="page">EN</a></span></nav></div>
     <header class="case-intro">
       <p class="category">Public investment · Peru</p>
       <h1>Public works on hold</h1>

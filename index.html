@@ -83,8 +83,12 @@ h1{color:#182a55}
 @media(max-width:620px){.project{grid-template-columns:minmax(0,1fr);gap:.55rem}.project-text{gap:.45rem}.evidence{min-height:12.7rem}}
 @media(max-width:440px){.intro{grid-template-columns:minmax(0,1fr) 3.85rem;gap:.65rem;align-items:start}.portrait{margin-top:.15rem}.bio{font-size:.95rem}.degree span{white-space:normal}}
   .language-nav{display:flex;justify-content:flex-end}
-.language-toggle{display:inline-flex;min-height:44px;align-items:center;padding:0 .8rem;border:1px solid #b9c4d9;color:#254393;background:#edf1fa;font-weight:700;font-size:.88rem;text-decoration:none}
-.language-toggle:hover{background:#dfe8fa;color:#182a55}
+.language-switch{display:inline-flex;border:1px solid #a7b7d3;background:#f3f6fc;border-radius:.38rem}
+.language-toggle{display:grid;min-width:44px;min-height:44px;place-items:center;color:#254393;font-weight:750;font-size:.86rem;text-decoration:none}
+.language-toggle+.language-toggle{border-left:1px solid #a7b7d3}
+.language-toggle:hover{background:#e0eafa;color:#182a55}
+.language-toggle[aria-current="page"]{background:#254393;color:#fff}
+.language-toggle:focus-visible{position:relative;z-index:1}
 .project-links .code-icon{min-width:44px;justify-content:center}.code-icon svg{width:22px;height:22px}.code-icon:hover{background:#ffffff80}
 </style>
 <link rel="alternate" hreflang="en" href="en.html">
@@ -92,7 +96,7 @@ h1{color:#182a55}
 <body>
   <a class="skip" href="#proyectos">Ir a los proyectos</a>
   <main class="page">
-    <nav class="language-nav" aria-label="Idioma"><a class="language-toggle" href="en.html" lang="en" hreflang="en">English</a></nav>
+    <nav class="language-nav" aria-label="Idioma"><span class="language-switch"><a class="language-toggle" href="/" lang="es" hreflang="es" aria-label="Español" aria-current="page">ES</a><a class="language-toggle" href="/en.html" lang="en" hreflang="en" aria-label="English">EN</a></span></nav>
     <header class="intro">
       <div class="identity">
         <h1>Jose Navarro</h1>
