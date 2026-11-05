@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Jose Navarro, bachiller en Ciencia Política y Gobierno por la PUCP. Proyectos sobre inversión pública, pobreza y economía en el Perú.">
   <title>Jose Navarro · Portafolio</title>
-  <link rel="stylesheet" href="portafolio-proyectos.css">
+  <link rel="stylesheet" href="portafolio-color.css">
 </head>
 <body>
   <a class="skip" href="#proyectos">Ir a los proyectos</a>
@@ -31,49 +31,46 @@
       <img class="portrait" src="retrato.jpg" alt="Jose Navarro en su graduación" width="160" height="160">
     </header>
     <section id="proyectos" aria-labelledby="titulo-proyectos">
-      <h2 class="section-title" id="titulo-proyectos">Proyectos seleccionados</h2>
+      <div class="section-heading"><h2 id="titulo-proyectos">Proyectos seleccionados</h2><p>Inversión pública, pobreza y economía en el Perú.</p></div>
       <div class="projects">
-        <article class="project">
+        <article class="project works">
           <p class="category"><span>01</span> Inversión pública</p>
           <h3>Obras que esperan</h3>
-          <p class="question">¿Cuántas obras paralizadas con más del 90 % de avance no tenían presupuesto registrado para 2026?</p>
-          <p>De las 281 obras en ese grupo, <strong>155</strong> tenían código de inversión y carecían de una asignación registrada.</p>
-          <figure class="evidence works">
-            <figcaption>Presupuesto 2026 de las 281 obras</figcaption>
-            <div class="segments" aria-hidden="true"><span></span><span></span><span></span></div>
-            <ul class="legend">
-              <li><span>Sin asignación registrada</span><b>155</b></li>
-              <li><span>Con asignación registrada</span><b>112</b></li>
-              <li><span>Sin código de inversión</span><b>14</b></li>
-            </ul>
+          <p class="question">¿Cuántas obras seguían paralizadas pese a estar cerca de terminar?</p>
+          <p>Revisé el inventario nacional de la Contraloría. De las 2.262 obras paralizadas, <strong>281 superaban el 90 % de avance físico</strong>. Entre las que pude identificar en el registro presupuestario, 155 no tenían fondos asignados para 2026.</p>
+          <figure class="evidence">
+            <figcaption>Obras paralizadas al 30 de junio de 2026</figcaption>
+            <div class="stat">281 <span>de 2.262</span></div>
+            <div class="track" aria-hidden="true"><span style="width:12.42%"></span></div>
+            <p>Con más del 90 % de avance físico</p>
           </figure>
           <div class="project-links"><a href="obras.html">Ver proyecto <span aria-hidden="true">↗</span></a><a href="https://github.com/bocchienjoyer/python_intermedio/tree/main/tarea_3">Código</a></div>
         </article>
-        <article class="project">
+        <article class="project poverty">
           <p class="category"><span>02</span> Condiciones de vida</p>
-          <h3>Pobreza monetaria en el Perú</h3>
-          <p class="question">¿Podemos reproducir la tasa oficial de pobreza de 2024 con la Encuesta Nacional de Hogares?</p>
-          <p>La estimación fue de <strong>27,58 %</strong>. Redondeada a un decimal, coincide con la cifra oficial del INEI.</p>
-          <figure class="evidence poverty">
-            <figcaption>Pobreza monetaria nacional · 2024</figcaption>
+          <h3>Tres skills para medir la pobreza</h3>
+          <p class="question">¿Puede un asistente de IA pasar de los archivos de una encuesta a una cifra de pobreza y un mapa?</p>
+          <p>Preparé tres <em>skills</em>, con instrucciones y código para limpiar la Encuesta Nacional de Hogares, hacer gráficos y elaborar mapas. El flujo estimó una pobreza nacional de <strong>27,58 %</strong>, que redondea al 27,6 % oficial.</p>
+          <figure class="evidence">
+            <figcaption>Pobreza monetaria nacional en 2024</figcaption>
             <div class="comparison">
-              <div><b>27,58 %</b><span>Estimación del proyecto</span></div>
+              <div><b>27,58 %</b><span>Flujo con skills</span></div>
               <div><b>27,6 %</b><span>Cifra oficial del INEI</span></div>
             </div>
           </figure>
           <div class="project-links"><a href="https://github.com/bocchienjoyer/enaho_skills">Método y código <span aria-hidden="true">↗</span></a></div>
         </article>
-        <article class="project">
+        <article class="project economy">
           <p class="category"><span>03</span> Economía peruana</p>
-          <h3>Una IA frente a datos económicos</h3>
-          <p class="question">¿Responde mejor una IA sobre inflación y tipo de cambio cuando consulta datos oficiales?</p>
-          <p>Acertó <strong>9 de 10</strong> preguntas al consultar datos del Banco Central de Reserva del Perú (BCRP) y <strong>1 de 10</strong> al responder de memoria, con opción de abstenerse.</p>
-          <figure class="evidence economy">
-            <figcaption>Respuestas correctas de la IA</figcaption>
+          <h3>Un conector para consultar al BCRP</h3>
+          <p class="question">¿Cómo conectar un asistente de IA con los datos oficiales de inflación y tipo de cambio?</p>
+          <p>Adapté un conector (MCP) para que Codex busque indicadores del Banco Central de Reserva del Perú, recupere cifras por fecha y cite la fuente. También añadí una herramienta para comparar indicadores en el mismo período. En la prueba acertó <strong>9 de 10</strong> con el conector y 1 de memoria, con opción de abstenerse.</p>
+          <figure class="evidence">
+            <figcaption>Aciertos en 10 preguntas económicas</figcaption>
             <div class="score">
-              <div><span>Consultó datos del BCRP</span><b>9 de 10</b></div>
+              <div><span>Con el conector al BCRP</span><b>9</b></div>
               <div class="track" aria-hidden="true"><span style="width:90%"></span></div>
-              <div><span>Respondió de memoria</span><b>1 de 10</b></div>
+              <div><span>De memoria</span><b>1</b></div>
               <div class="track" aria-hidden="true"><span style="width:10%"></span></div>
             </div>
           </figure>
